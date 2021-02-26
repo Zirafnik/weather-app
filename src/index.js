@@ -1,6 +1,5 @@
-let getData= async function(city) {
-    let response= await fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=83c4dc5fdd855799cbe90da4a319d8d0`, {mode: 'cors'});
-    console.log(response);
-}
+import {inputEV} from './dom.js';
 
-getData('Ljubljana');
+inputEV();
+
+//getData('Ljubljana').catch(err => console.error(err));
