@@ -9,11 +9,18 @@ function inputEV() {
                 return createRelevantObj(rawData);
             })
             .then(function(processedData) {
+                displayData(processedData);
                 console.log(processedData)
             })
             .catch(err => console.error(err));
         }
     })
+}
+
+function displayData(data) {
+    let allSpans= Array.from(document.querySelectorAll('span'));
+    allSpans[0].textContent= data.name;
+    allSpans[1].textContent= data.info.country;
 }
 
 export {inputEV};
