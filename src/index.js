@@ -1,3 +1,4 @@
-import {inputEV} from './dom.js';
+import {inputEV, windowEV} from './dom.js';
 
+windowEV();
 inputEV();
