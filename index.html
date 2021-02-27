@@ -7,14 +7,39 @@
         <title>Weather App</title>
     </head>
     <body>
-        <header>
-            <input type="text" placeholder="City">
-        </header>
-        
-        <div id="data">
-            <div><span>Orlando, </span><span>US</span></div>
-            <span>57F</span>
+        <div id="card">
+            <header>
+                <h1>Get Current Weather</h1>
+                <input type="text" value="Ljubljana" placeholder="City">
+            </header>
             
+            <div id="data">
+                <div id="location">
+                    <span></span>
+                </div>
+                <div id="main">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="info1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="info2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="sunset-sunrise">
+                    <span></span>
+                    <span></span>
+                </div>  
+            </div>
+
+            <div id="button-div">
+                <button id="temp-converter">F/C</button>
+            </div>
         </div>
 
         <footer>
