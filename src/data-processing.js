@@ -21,6 +21,7 @@ function createRelevantObj(data) {
         },
         info: {
             country: data.sys.country,
+            timezone: data.timezone,
             sunrise: data.sys.sunrise,
             sunset: data.sys.sunset
         }

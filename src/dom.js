@@ -50,13 +50,17 @@ function displayData(data) {
     info1[2].textContent= `Feels like: ${data.weather.tempFeels}`;
 
     let info2= Array.from(document.querySelectorAll('#info2 > span'));
-    info2[0].textContent= `Humidity: ${data.weather.humidity}`;
-    info2[1].textContent= `Pressure: ${data.weather.pressure}`;
-    info2[2].textContent= `Wind: ${data.weather.wind}`;
+    info2[0].textContent= `Humidity: ${data.weather.humidity}%`;
+    info2[1].textContent= `Pressure: ${data.weather.pressure} hPa`;
+    info2[2].textContent= `Wind: ${Math.round(data.weather.wind * 3.6)} km/h`;
 
     let sunSetRise= Array.from(document.querySelectorAll('#sunset-sunrise > span'));
-    sunSetRise[0].textContent= `Sunrise: ${data.info.sunrise}`;
-    sunSetRise[1].textContent= `Sunset: ${data.info.sunset}`;
+    let sunrise= new Date((data.info.sunrise + data.info.timezone - 3600) * 1000);
+    console.log(sunrise);
+    sunSetRise[0].textContent= `Sunrise: ${sunrise.getHours()}:${sunrise.getMinutes()}`;
+    let sunset= new Date((data.info.sunset + data.info.timezone - 3600) * 1000);
+    console.log(sunset);
+    sunSetRise[1].textContent= `Sunset: ${sunset.getHours()}:${sunset.getMinutes()}`;
 }
 
 export {inputEV, windowEV};
