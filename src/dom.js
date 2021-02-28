@@ -44,6 +44,8 @@ function displayData(data) {
     let main= Array.from(document.querySelectorAll('#main > span'));
     main[0].textContent= `${data.weather.description}`;
     main[1].textContent= `${data.weather.temp}\u2103`;
+    let img= document.querySelector('#wicon');
+    img.src= 'http://openweathermap.org/img/w/' + data.info.icon + '.png';
 
     let info1= Array.from(document.querySelectorAll('#info1 > span'));
     info1[0].textContent= `Min: ${data.weather.tempMin}\u2103`;

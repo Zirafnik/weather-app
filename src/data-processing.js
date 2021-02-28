@@ -23,7 +23,8 @@ function createRelevantObj(data) {
             country: data.sys.country,
             timezone: data.timezone,
             sunrise: data.sys.sunrise,
-            sunset: data.sys.sunset
+            sunset: data.sys.sunset,
+            icon: data.weather[0].icon
         }
     }
 }
