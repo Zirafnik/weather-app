@@ -1,4 +1,4 @@
-import {inputEV, windowEV} from './dom.js';
+import {inputEV, toggleEV, windowEV} from './dom.js';
 
 windowEV();
 inputEV();
